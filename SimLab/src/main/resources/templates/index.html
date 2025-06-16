@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>미니 투자 시뮬레이터 - 홈</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fa; }
+        header {
+            background-color: #2b4a6f; color: white;
+            padding: 15px 30px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        nav a {
+            color: white; text-decoration: none; margin: 0 12px; font-weight: bold;
+        }
+        nav a:hover { text-decoration: underline; }
+        .container {
+            max-width: 700px; margin: 60px auto; padding: 0 20px; text-align: center;
+        }
+        h1 { color: #2b4a6f; margin-bottom: 20px; }
+        p {
+            font-size: 1.1rem; color: #444; line-height: 1.6;
+        }
+        button {
+            margin-top: 30px; padding: 12px 25px; font-size: 1rem;
+            background-color: #2b4a6f; color: white; border: none;
+            border-radius: 6px; cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #3e5a7e;
+        }
+    </style>
+</head>
+<body>
+
+<div th:replace="fragments/header :: headerFragment"></div>
+
+<div class="container">
+    <h1>가상 주식 투자</h1>
+    <button type="button" th:onclick="|location.href='@{/stocks}'|">📈 주식 리스트 보기</button>
+</div>
+
+</body>
+</html>

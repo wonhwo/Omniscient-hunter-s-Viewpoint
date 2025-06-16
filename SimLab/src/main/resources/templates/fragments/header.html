@@ -1,0 +1,13 @@
+<!-- templates/fragments/header.html -->
+<div th:fragment="headerFragment">
+    <header>
+        <div><strong>📊 미니 투자 시뮬레이터</strong></div>
+        <nav>
+            <a th:href="@{/}">홈</a>
+            <a th:href="@{/stocks}">주식 리스트</a>
+            <a th:if="${user == null}" th:href="@{/login}">로그인</a>
+            <a th:if="${user != null}" th:href="@{/logout}">로그아웃</a>
+        </nav>
+    </header>
+</div>
+
